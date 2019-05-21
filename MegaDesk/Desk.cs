@@ -8,9 +8,19 @@ namespace MegaDesk
 {
     public class Desk
     {
-        int width;
-        int height;
-        int numberOfDrawers;
-        string surfaceMaterial;
+        public decimal Width { get; set; }
+        public decimal Depth { get; set; }
+        public int NumDrawers { get; set; }
+
+        public enum DesktopMaterial
+        {
+            Rosewood,
+            Laminate,
+            Veneer,
+            Oak,
+            Pine,
+        }
+
+        public DesktopMaterial Material { get; set; }
     }
 }

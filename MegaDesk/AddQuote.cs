@@ -13,6 +13,8 @@ namespace MegaDesk
     public partial class AddQuote : Form
     {
         private Form _MainMenu;
+        
+
         public AddQuote(Form MainMenu)
         {
             InitializeComponent();
@@ -52,7 +54,12 @@ namespace MegaDesk
 
         private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
+        }
 
+        private void NumericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+           
         }
     }
 }

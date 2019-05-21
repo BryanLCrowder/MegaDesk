@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MegaDesk
 {
-    class DeskQuote
+        public class DeskQuote
     {
         string customerName;
         string shippingType;

@@ -1,0 +1,16 @@
+B:\MegaDesk\MegaDesk\bin\Debug\MegaDesk.exe.config
+B:\MegaDesk\MegaDesk\bin\Debug\MegaDesk.exe
+B:\MegaDesk\MegaDesk\bin\Debug\MegaDesk.pdb
+B:\MegaDesk\MegaDesk\bin\Debug\Newtonsoft.Json.dll
+B:\MegaDesk\MegaDesk\bin\Debug\Newtonsoft.Json.xml
+B:\MegaDesk\MegaDesk\obj\Debug\MegaDesk2-0.csprojAssemblyReference.cache
+B:\MegaDesk\MegaDesk\obj\Debug\MegaDesk.MainMenu.resources
+B:\MegaDesk\MegaDesk\obj\Debug\MegaDesk.AddQuote.resources
+B:\MegaDesk\MegaDesk\obj\Debug\MegaDesk.ViewAllQuotes.resources
+B:\MegaDesk\MegaDesk\obj\Debug\MegaDesk.SearchQuotes.resources
+B:\MegaDesk\MegaDesk\obj\Debug\MegaDesk.Properties.Resources.resources
+B:\MegaDesk\MegaDesk\obj\Debug\MegaDesk2-0.csproj.GenerateResource.cache
+B:\MegaDesk\MegaDesk\obj\Debug\MegaDesk2-0.csproj.CoreCompileInputs.cache
+B:\MegaDesk\MegaDesk\obj\Debug\MegaDesk2-0.csproj.CopyComplete
+B:\MegaDesk\MegaDesk\obj\Debug\MegaDesk.exe
+B:\MegaDesk\MegaDesk\obj\Debug\MegaDesk.pdb
