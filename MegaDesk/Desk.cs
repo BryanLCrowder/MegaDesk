@@ -12,7 +12,7 @@ namespace MegaDesk
         public decimal Depth { get; set; }
         public int NumDrawers { get; set; }
 
-        public enum DesktopMaterial
+        public enum DeskMaterial
         {
             Rosewood,
             Laminate,
@@ -21,6 +21,6 @@ namespace MegaDesk
             Pine,
         }
 
-        public DesktopMaterial Material { get; set; }
+        public DeskMaterial Material { get; set; }
     }
 }

@@ -13,10 +13,11 @@ namespace MegaDesk
     public partial class AddQuote : Form
     {
         private Form _MainMenu;
-        
+        private object materials;
 
         public AddQuote(Form MainMenu)
         {
+            
             InitializeComponent();
             _MainMenu = MainMenu;
         }
@@ -60,6 +61,11 @@ namespace MegaDesk
         private void NumericUpDown1_ValueChanged(object sender, EventArgs e)
         {
            
+        }
+
+        private void NumericUpDownDrawers_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
