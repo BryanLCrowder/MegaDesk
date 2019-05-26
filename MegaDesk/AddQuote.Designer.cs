@@ -31,7 +31,7 @@
             this.Cancel = new System.Windows.Forms.Button();
             this.getQuote = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.customerName = new System.Windows.Forms.TextBox();
             this.width = new System.Windows.Forms.Label();
             this.numberOfDrawers = new System.Windows.Forms.Label();
             this.height = new System.Windows.Forms.Label();
@@ -43,6 +43,10 @@
             this.materialBox = new System.Windows.Forms.ComboBox();
             this.deliveryBox = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.shippingCost = new System.Windows.Forms.Label();
+            this.structCost = new System.Windows.Forms.Label();
+            this.surfCost = new System.Windows.Forms.Label();
+            this.finalCost = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.WidthUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HeightUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrawers)).BeginInit();
@@ -50,7 +54,7 @@
             // 
             // Cancel
             // 
-            this.Cancel.Location = new System.Drawing.Point(490, 293);
+            this.Cancel.Location = new System.Drawing.Point(490, 262);
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(190, 46);
             this.Cancel.TabIndex = 1;
@@ -60,12 +64,13 @@
             // 
             // getQuote
             // 
-            this.getQuote.Location = new System.Drawing.Point(91, 293);
+            this.getQuote.Location = new System.Drawing.Point(91, 262);
             this.getQuote.Name = "getQuote";
             this.getQuote.Size = new System.Drawing.Size(190, 46);
             this.getQuote.TabIndex = 2;
             this.getQuote.Text = "Get Quote";
             this.getQuote.UseVisualStyleBackColor = true;
+            this.getQuote.Click += new System.EventHandler(this.GetQuote_Click);
             // 
             // label1
             // 
@@ -77,13 +82,13 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Customers Name";
             // 
-            // textBox1
+            // customerName
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(256, 60);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(424, 30);
-            this.textBox1.TabIndex = 4;
+            this.customerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customerName.Location = new System.Drawing.Point(256, 60);
+            this.customerName.Name = "customerName";
+            this.customerName.Size = new System.Drawing.Size(424, 30);
+            this.customerName.TabIndex = 4;
             // 
             // width
             // 
@@ -130,7 +135,7 @@
             // 
             this.delivery.AutoSize = true;
             this.delivery.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.delivery.Location = new System.Drawing.Point(472, 200);
+            this.delivery.Location = new System.Drawing.Point(469, 200);
             this.delivery.Name = "delivery";
             this.delivery.Size = new System.Drawing.Size(64, 20);
             this.delivery.TabIndex = 9;
@@ -233,11 +238,57 @@
             this.label2.Text = "Add New Quote";
             this.label2.Click += new System.EventHandler(this.Label2_Click_1);
             // 
+            // shippingCost
+            // 
+            this.shippingCost.AutoSize = true;
+            this.shippingCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.shippingCost.Location = new System.Drawing.Point(429, 337);
+            this.shippingCost.Name = "shippingCost";
+            this.shippingCost.Size = new System.Drawing.Size(108, 20);
+            this.shippingCost.TabIndex = 16;
+            this.shippingCost.Text = "ShippingCost:\r\n";
+            // 
+            // structCost
+            // 
+            this.structCost.AutoSize = true;
+            this.structCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.structCost.Location = new System.Drawing.Point(74, 396);
+            this.structCost.Name = "structCost";
+            this.structCost.Size = new System.Drawing.Size(116, 20);
+            this.structCost.TabIndex = 17;
+            this.structCost.Text = "Structure Cost:";
+            this.structCost.Click += new System.EventHandler(this.Label4_Click);
+            // 
+            // surfCost
+            // 
+            this.surfCost.AutoSize = true;
+            this.surfCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.surfCost.Location = new System.Drawing.Point(84, 337);
+            this.surfCost.Name = "surfCost";
+            this.surfCost.Size = new System.Drawing.Size(106, 20);
+            this.surfCost.TabIndex = 18;
+            this.surfCost.Text = "Surface Cost:";
+            this.surfCost.Click += new System.EventHandler(this.Label5_Click);
+            // 
+            // finalCost
+            // 
+            this.finalCost.AutoSize = true;
+            this.finalCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.finalCost.Location = new System.Drawing.Point(449, 396);
+            this.finalCost.Name = "finalCost";
+            this.finalCost.Size = new System.Drawing.Size(84, 20);
+            this.finalCost.TabIndex = 19;
+            this.finalCost.Text = "Final Cost:";
+            // 
             // AddQuote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.finalCost);
+            this.Controls.Add(this.surfCost);
+            this.Controls.Add(this.structCost);
+            this.Controls.Add(this.shippingCost);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.deliveryBox);
             this.Controls.Add(this.materialBox);
@@ -249,7 +300,7 @@
             this.Controls.Add(this.height);
             this.Controls.Add(this.numberOfDrawers);
             this.Controls.Add(this.width);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.customerName);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.getQuote);
             this.Controls.Add(this.Cancel);
@@ -270,7 +321,7 @@
         private System.Windows.Forms.Button Cancel;
         private System.Windows.Forms.Button getQuote;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox customerName;
         private System.Windows.Forms.Label width;
         private System.Windows.Forms.Label numberOfDrawers;
         private System.Windows.Forms.Label height;
@@ -282,5 +333,9 @@
         private System.Windows.Forms.ComboBox materialBox;
         private System.Windows.Forms.ComboBox deliveryBox;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label shippingCost;
+        private System.Windows.Forms.Label structCost;
+        private System.Windows.Forms.Label surfCost;
+        private System.Windows.Forms.Label finalCost;
     }
 }

@@ -8,8 +8,8 @@ namespace MegaDesk
 {
     public class Desk
     {
-        public decimal Width { get; set; }
-        public decimal Depth { get; set; }
+        public decimal WidthUpDown { get; set; }
+        public decimal HeightUpDown { get; set; }
         public int NumDrawers { get; set; }
 
         public enum DeskMaterial

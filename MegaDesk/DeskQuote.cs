@@ -55,7 +55,7 @@ namespace MegaDesk
 
         public decimal GetShippingCost()
         {
-            decimal size = Desk.Width * Desk.Depth;
+            decimal size = Desk.WidthUpDown * Desk.HeightUpDown;
             switch (ShippingDays)
             {
                 case 3:
@@ -100,7 +100,7 @@ namespace MegaDesk
 
         public decimal GetSurfaceCost()
         {
-            decimal size = Desk.Width * Desk.Depth;
+            decimal size = Desk.WidthUpDown * Desk.HeightUpDown;
 
             switch (Desk.Material)
             {
