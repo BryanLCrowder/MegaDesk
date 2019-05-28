@@ -56,7 +56,7 @@ namespace MegaDesk
 
         private void ExitBut_Click(object sender, EventArgs e)
         {
-
+            Close();
         }
     }
 }

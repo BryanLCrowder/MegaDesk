@@ -104,11 +104,11 @@ namespace MegaDesk
             {
 
             }
-            structCost.Text = deskQuote.GetStructureCost().ToString();
-            surfCost.Text = deskQuote.GetSurfaceCost().ToString();
-            shippingCost.Text = deskQuote.GetShippingCost().ToString();
-            finalCost.Text = deskQuote.GetQuote().ToString();
-
+                structCostlbl.Text = deskQuote.GetStructureCost().ToString();
+                surfaceCostlbl.Text = deskQuote.GetSurfaceCost().ToString();
+                shippingCostlbl.Text = deskQuote.GetShippingCost().ToString();
+                finalCostlbl.Text = deskQuote.GetQuote().ToString();
+            
 
 
             List<DeskQuote> deskQuotes = new List<DeskQuote>();
@@ -130,35 +130,25 @@ namespace MegaDesk
                 File.WriteAllText(@"quotes.json", list);
             }
 
-            var mainMenu = (MainMenu)Tag;
-            mainMenu.Show();
-            Close();
+          
         }
-        private void AddQuotetoFile(List<DeskQuote> DeskQuote)
-        {
-            File.WriteAllText(@"quotes.json", JsonConvert.SerializeObject(DeskQuote));
-
-            string quotesFile = "quotes.txt";
-
-            using (StreamWriter streamwriter = File.AppendText(quotesFile))
-            {
-                streamwriter.WriteLine(
-                $"{DeskQuote.CustomerName}, " +
-                $"{DeskQuote.QuoteDate}, " +
-                $"{DeskQuote.Desk.Depth}, " +
-                $"{DeskQuote.Desk.Width}, " +
-                $"{DeskQuote.Desk.NumDrawers}, " +
-                $"{DeskQuote.Desk.Material}, " +
-                $"{DeskQuote.ShippingDays} Days, " +
-                $"{DeskQuote.Quote}");
-            }
-        }
+      
         private void Label5_Click(object sender, EventArgs e)
         {
 
         }
 
         private void Label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ShippingCost_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label3_Click(object sender, EventArgs e)
         {
 
         }

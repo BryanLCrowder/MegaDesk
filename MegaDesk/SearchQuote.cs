@@ -14,11 +14,12 @@ namespace MegaDesk
 {
     public partial class SearchQuotes : Form
     {
-        private Desk.DeskMaterial materials;
+        private Form _MainMenu;
 
-        public SearchQuotes(MainMenu mainMenu)
+        public SearchQuotes(Form MainMenu)
         {
             InitializeComponent();
+            _MainMenu = MainMenu;
             loadGrid();
 
             var materials = Enum.GetValues(typeof(Desk.DeskMaterial))
@@ -28,15 +29,8 @@ namespace MegaDesk
             comboBox1.DataSource = materials;
 
             comboBox1.SelectedIndex = -1;
-
-
         }
-        private void cancelQuoteButton(object sender, EventArgs e)
-        {
-            var mainMenu = (MainMenu)Tag;
-            mainMenu.Show();
-            Close();
-        }
+       
 
         private void loadGrid()
         {
@@ -103,6 +97,12 @@ namespace MegaDesk
         private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+      
+
+        private void SearchQuotes_FormClosed_1(object sender, FormClosedEventArgs e)
+        {
+            _MainMenu.Show();
         }
     }
 }

@@ -47,6 +47,10 @@
             this.structCost = new System.Windows.Forms.Label();
             this.surfCost = new System.Windows.Forms.Label();
             this.finalCost = new System.Windows.Forms.Label();
+            this.surfaceCostlbl = new System.Windows.Forms.Label();
+            this.structCostlbl = new System.Windows.Forms.Label();
+            this.shippingCostlbl = new System.Windows.Forms.Label();
+            this.finalCostlbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.WidthUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HeightUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrawers)).BeginInit();
@@ -247,6 +251,7 @@
             this.shippingCost.Size = new System.Drawing.Size(108, 20);
             this.shippingCost.TabIndex = 16;
             this.shippingCost.Text = "ShippingCost:\r\n";
+            this.shippingCost.Click += new System.EventHandler(this.ShippingCost_Click);
             // 
             // structCost
             // 
@@ -280,11 +285,52 @@
             this.finalCost.TabIndex = 19;
             this.finalCost.Text = "Final Cost:";
             // 
+            // surfaceCostlbl
+            // 
+            this.surfaceCostlbl.AutoSize = true;
+            this.surfaceCostlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.surfaceCostlbl.Location = new System.Drawing.Point(196, 337);
+            this.surfaceCostlbl.Name = "surfaceCostlbl";
+            this.surfaceCostlbl.Size = new System.Drawing.Size(0, 20);
+            this.surfaceCostlbl.TabIndex = 20;
+            this.surfaceCostlbl.Click += new System.EventHandler(this.Label3_Click);
+            // 
+            // structCostlbl
+            // 
+            this.structCostlbl.AutoSize = true;
+            this.structCostlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.structCostlbl.Location = new System.Drawing.Point(196, 396);
+            this.structCostlbl.Name = "structCostlbl";
+            this.structCostlbl.Size = new System.Drawing.Size(0, 20);
+            this.structCostlbl.TabIndex = 21;
+            // 
+            // shippingCostlbl
+            // 
+            this.shippingCostlbl.AutoSize = true;
+            this.shippingCostlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.shippingCostlbl.Location = new System.Drawing.Point(555, 337);
+            this.shippingCostlbl.Name = "shippingCostlbl";
+            this.shippingCostlbl.Size = new System.Drawing.Size(0, 20);
+            this.shippingCostlbl.TabIndex = 22;
+            // 
+            // finalCostlbl
+            // 
+            this.finalCostlbl.AutoSize = true;
+            this.finalCostlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.finalCostlbl.Location = new System.Drawing.Point(555, 396);
+            this.finalCostlbl.Name = "finalCostlbl";
+            this.finalCostlbl.Size = new System.Drawing.Size(0, 20);
+            this.finalCostlbl.TabIndex = 23;
+            // 
             // AddQuote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.finalCostlbl);
+            this.Controls.Add(this.shippingCostlbl);
+            this.Controls.Add(this.structCostlbl);
+            this.Controls.Add(this.surfaceCostlbl);
             this.Controls.Add(this.finalCost);
             this.Controls.Add(this.surfCost);
             this.Controls.Add(this.structCost);
@@ -337,5 +383,9 @@
         private System.Windows.Forms.Label structCost;
         private System.Windows.Forms.Label surfCost;
         private System.Windows.Forms.Label finalCost;
+        private System.Windows.Forms.Label surfaceCostlbl;
+        private System.Windows.Forms.Label structCostlbl;
+        private System.Windows.Forms.Label shippingCostlbl;
+        private System.Windows.Forms.Label finalCostlbl;
     }
 }

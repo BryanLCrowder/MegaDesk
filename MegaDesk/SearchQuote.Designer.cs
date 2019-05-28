@@ -66,6 +66,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "SearchQuotes";
             this.Text = "Search Quotes";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SearchQuotes_FormClosed_1);
             this.Load += new System.EventHandler(this.SearchQuotes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
